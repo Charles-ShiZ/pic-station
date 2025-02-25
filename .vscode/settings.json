@@ -1,0 +1,218 @@
+{
+  "cSpell.words": [
+    "hideable",
+    "IHSL",
+    "immer",
+    "IRGB",
+    "TRGBA",
+    "Konva",
+    "linethrough",
+    "Mult",
+    "notistack",
+    "Noto",
+    "psdp",
+    "QIANKUN",
+    "Sider",
+    "Textbox",
+    "TPSD",
+    "TTSP",
+    "waku"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ab307e",
+    "activityBar.background": "#ab307e",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#25320e",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#ab307e",
+    "statusBar.background": "#832561",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#ab307e",
+    "statusBarItem.remoteBackground": "#832561",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#832561",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#83256199",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "#832561",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //针对共用的语言如JS、TS和JSX关闭文件保存自动格式化功能，通过eslint来做这件事
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "quick.pin.boxes": [
+    {
+      "time": "2024/04/22 17:26:29",
+      "fileName": "/Users/10022072/Documents/gitlab/cmp/src/pages/Editor/RightPanel/ImagePropPanel.tsx",
+      "selection": {
+        "anchor": {
+          "line": 84,
+          "character": 70
+        },
+        "active": {
+          "line": 84,
+          "character": 12
+        }
+      },
+      "selectionText": "<ColorPicker value={color} onChange={handleColorChange} />",
+      "label": "<ColorPicker value={color} onChange={handleColorChange} />"
+    },
+    {
+      "time": "2024/04/22 15:30:01",
+      "fileName": "/Users/10022072/Documents/gitlab/cmp/src/pages/Editor/ImagePublishDrawer/index.tsx",
+      "selection": {
+        "anchor": {
+          "line": 763,
+          "character": 90
+        },
+        "active": {
+          "line": 763,
+          "character": 20
+        }
+      },
+      "selectionText": "const compositeImageFrontParamList = getCompositeImageFrontParamList()",
+      "label": "const compositeImageFrontParamList = getCompositeImageFrontParamList()"
+    },
+    {
+      "time": "2024/04/22 15:29:26",
+      "fileName": "/Users/10022072/Documents/gitlab/cmp/src/pages/Editor/ImagePublishDrawer/ImageItem.tsx",
+      "selection": {
+        "anchor": {
+          "line": 51,
+          "character": 40
+        },
+        "active": {
+          "line": 51,
+          "character": 2
+        }
+      },
+      "selectionText": "const scale = Math.min(xScale, yScale)",
+      "label": "const scale = Math.min(xScale, yScale)"
+    },
+    {
+      "time": "2024/03/13 15:06:54",
+      "fileName": "/Users/10022072/Documents/Gitlab/cmp/src/pages/Editor/utils.ts",
+      "selection": {
+        "anchor": {
+          "line": 35,
+          "character": 11
+        },
+        "active": {
+          "line": 35,
+          "character": 11
+        }
+      },
+      "selectionText": "",
+      "label": "cmp/src/pages/Editor/utils.ts"
+    },
+    {
+      "time": "2024/01/30 19:40:02",
+      "fileName": "/Users/10022072/Documents/Gitlab-Shein/cmp2/src/pages/Editor/LeftPanel/BatchReplacePanel/index.tsx",
+      "selection": {
+        "anchor": {
+          "line": 1384,
+          "character": 18
+        },
+        "active": {
+          "line": 1384,
+          "character": 18
+        }
+      },
+      "selectionText": "",
+      "label": "cmp2/src/pages/Editor/LeftPanel/BatchReplacePanel/index.tsx"
+    },
+    {
+      "time": "2024/01/25 23:03:17",
+      "fileName": "/Users/10022072/Documents/Gitlab-Shein/cmp2/src/pages/Editor/LeftPanel/BatchReplacePanel/index.tsx",
+      "selection": {
+        "anchor": {
+          "line": 1384,
+          "character": 18
+        },
+        "active": {
+          "line": 1384,
+          "character": 18
+        }
+      },
+      "selectionText": "",
+      "label": "cmp2/src/pages/Editor/LeftPanel/BatchReplacePanel/index.tsx"
+    },
+    {
+      "time": "2024/01/14 20:49:16",
+      "fileName": "/Users/10022072/Documents/Gitlab-Shein/cmp2/src/pages/Editor/LeftPanel/BatchReplacePanel/index.tsx",
+      "selection": {
+        "anchor": {
+          "line": 93,
+          "character": 27
+        },
+        "active": {
+          "line": 91,
+          "character": 0
+        }
+      },
+      "selectionText": "  const {\n    psdParsedData: { layers },\n  } = activePsdTemplateData",
+      "label": "const {\n    psdParsedData: { layers },\n  } = activePsdTemplateData"
+    },
+    {
+      "time": "2024/01/01 23:30:27",
+      "fileName": "/Users/10022072/Documents/Gitlab-Shein/cmp2/src/pages/Editor/layerComponents/textLayer/View.tsx",
+      "selection": {
+        "anchor": {
+          "line": 90,
+          "character": 23
+        },
+        "active": {
+          "line": 90,
+          "character": 23
+        }
+      },
+      "selectionText": "",
+      "label": "cmp2/src/pages/Editor/layerComponents/textLayer/View.tsx"
+    },
+    {
+      "time": "2023/11/27 14:16:26",
+      "fileName": "/Users/10022072/Documents/Gitlab-Shein/cmp2/src/utils/index.ts",
+      "selection": {
+        "anchor": {
+          "line": 300,
+          "character": 16
+        },
+        "active": {
+          "line": 300,
+          "character": 54
+        }
+      },
+      "selectionText": "convertPsdLayerParsedToConsoleTemplate",
+      "label": "convertPsdLayerParsedToConsoleTemplate"
+    },
+    {
+      "time": "2023/10/12 20:16:43",
+      "fileName": "/Users/10022072/Documents/Gitlab-Shein/cmp/src/pages/imgGeneratorMgt/console/LeftNavArea/BatchReplaceDialog/index.tsx",
+      "selection": {
+        "anchor": {
+          "line": 1254,
+          "character": 60
+        },
+        "active": {
+          "line": 1254,
+          "character": 26
+        }
+      },
+      "selectionText": "const newImageUrl = '' || imageUrl",
+      "label": "const newImageUrl = '' || imageUrl"
+    }
+  ]
+}
