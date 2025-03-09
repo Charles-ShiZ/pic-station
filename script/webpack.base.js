@@ -2,7 +2,9 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackTagsPlugin = require("html-webpack-tags-plugin");
 const webpack = require("webpack");
+const { name } = require("../package.json");
 
 const isDev = process.env.NODE_ENV === "development";
 
@@ -15,11 +17,36 @@ module.exports = {
     path: path.resolve(__dirname, "../dist"), // 打包的出口文件夹路径
     clean: true, // webpack4需要配置clean-webpack-plugin删除dist文件，webpack5内置了。
     publicPath: "/", // 打包后文件的公共前缀路径
+
+    library: `${name}-[name]`,
+    libraryTarget: "umd",
+    // webpack 5 需要把 jsonpFunction 替换成 chunkLoadingGlobal
+    chunkLoadingGlobal: `webpackJsonp_${name}`,
+    // globalObject: "window",
   },
   module: {
     rules: [
       {
-        test: /\.css$/, //匹配所有的 less 文件
+        // css-module 配置
+        test: /\.module\.css$/,
+        enforce: "pre",
+        include: [path.resolve(__dirname, "../src")],
+        use: [
+          isDev ? "style-loader" : MiniCssExtractPlugin.loader,
+          {
+            loader: "css-loader",
+            options: {
+              modules: {
+                localIdentName: "[path][name]__[local]--[hash:base64:5]",
+              },
+            },
+          },
+          "postcss-loader",
+        ],
+      },
+      {
+        test: /\.css$/, //匹配所有的 css 文件
+        exclude: /\.module\.css$/,
         enforce: "pre",
         include: [path.resolve(__dirname, "../src")],
         use: [
@@ -95,6 +122,25 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../public/index.html"),
       inject: true,
+    }),
+
+    new HtmlWebpackTagsPlugin({
+      publicPath: "",
+      links: [
+        {
+          path: "https://localhost:3001/",
+          attributes: {
+            rel: "preconnect",
+          },
+        },
+        {
+          path: "https://localhost:3001/",
+          attributes: {
+            rel: "dns-prefetch",
+          },
+        },
+      ],
+      append: false, // 若为 true，标签会追加到 body 末尾；为 false 会插入到 head 中
     }),
     new webpack.DefinePlugin({
       "process.env.BASE_ENV": JSON.stringify(process.env.BASE_ENV),

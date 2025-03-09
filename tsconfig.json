@@ -3,10 +3,10 @@
     "experimentalDecorators": true,
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["WebWorker", "DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
@@ -22,5 +22,13 @@
       "*": ["node_modules/*"]
     }
   },
-  "include": ["./src/**/*.ts", "./src/**/*.tsx"]
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "src/smartColorize/workers/colorizeImages.worker.ts",
+    "src/utils/workers/TranslationPipeline.js",
+    "src/utils/workers/translator.worker.js",
+    "src/hooks/workers/TranslationPipeline.js",
+    "src/hooks/workers/translator.worker.js"
+  ]
 }

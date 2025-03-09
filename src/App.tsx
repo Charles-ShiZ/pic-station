@@ -1,8 +1,7 @@
-import React from "react";
-import router from "./router";
-import { RouterProvider } from "react-router";
+import React, { useEffect } from "react";
+import Dashboard from "./Dashboard";
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <Dashboard></Dashboard>;
 }
 export default App;

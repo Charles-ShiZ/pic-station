@@ -1,0 +1,21 @@
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root > div {
+  height: 100%;
+}
+
+#root > div > main {
+  height: 100%;
+}
+
+#root > div > main > .MuiStack-root {
+  height: 100%;
+}
+
+.MuiBox-root {
+  background: red;
+}

@@ -18,7 +18,7 @@ const VisuallyHiddenInput = styled("input")({
 });
 
 export function UploadPsd() {
-  const [psd, setPsd] = useState<string>(""); // http://localhost:3001/psds/1200-1200.psd
+  const [psd, setPsd] = useState<string>(""); // https://localhost:3001/psds/1200-1200.psd
   return (
     <>
       <Input
@@ -29,10 +29,30 @@ export function UploadPsd() {
       ></Input>
       <Button
         onClick={async () => {
-          const res = await axios.post("http://localhost:3001/psdParsing", {
-            psd,
-          });
-          console.log("%c👉 res: ", "background:#41b883", res); // 🐵
+          const psds = [
+            "https://localhost:3001/psds/1080-1920-1.psd",
+            "https://localhost:3001/psds/1080-1920-2.psd",
+            "https://localhost:3001/psds/1080-1920-3.psd",
+            "https://localhost:3001/psds/1080-1920-4.psd",
+            "https://localhost:3001/psds/1080-1920.psd",
+            "https://localhost:3001/psds/1200-902.psd",
+            "https://localhost:3001/psds/1200-1200.psd",
+            "https://localhost:3001/psds/1200-1500.psd",
+            "https://localhost:3001/psds/dc13.psd",
+          ];
+          const psdData = await Promise.allSettled(
+            psds.map(async (psd) => {
+              const res = await axios.post(
+                "https://localhost:3001/psdParsing",
+                {
+                  psd,
+                }
+              );
+              return res;
+            })
+          );
+
+          console.log("%c👉 psdData: ", "background:#41b883", psdData); // 🐵
         }}
       >
         解析

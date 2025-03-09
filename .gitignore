@@ -1,2 +1,4 @@
 /node_modules
 /.vscode/autoApi.config.js
+/.dist
+/models

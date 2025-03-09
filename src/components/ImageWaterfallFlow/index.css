@@ -1,4 +1,23 @@
 .psdImageWrapper {
-  width: "auto";
-  height: 200px;
+  /* width: auto;
+  height: 200px; */
+}
+
+.myMasonryGrid {
+  /* margin-top: 2rem; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+}
+
+.myMasonryGridColumn {
+  padding-left: 1rem;
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.myMasonryGridColumn > img {
+  /* change div to reference your elements you put in <Masonry> */
+  margin-bottom: 1rem;
 }
