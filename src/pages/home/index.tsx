@@ -27,7 +27,12 @@ export default function Home() {
         打开
       </Button>
       <Dialog
-        container={document.querySelector("#microApp")?.querySelector("#root")}
+        /** experimentalStyleIsolation 需要将 dialog 组件的弹窗放到微应用的 root 里*/
+        // container={document.querySelector("#microApp")?.querySelector("#root")}
+
+        /** strictStyleIsolation 需要将 dialog 组件的弹窗放到微应用的 root 里，但无法使用 querySelector 直接获取 root，需要先获取 shadowRoot*/
+        //  container={document?.querySelector("#microApp")?.children?.[0]?.shadowRoot?.querySelector("#root")}
+
         open={dialogOpen}
         onClose={handleClose}
         aria-labelledby="alert-dialog-title"
